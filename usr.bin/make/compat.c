@@ -107,7 +107,7 @@ CompatDeleteTarget(GNode *gn)
 	if (gn != NULL && !GNode_IsPrecious(gn)) {
 		const char *file = GNode_VarTarget(gn);
 
-		if (!opts.noExecute && unlink_file(file)) {
+		if (!opts.noExecute && unlink(file)) {
 			Error("*** %s removed", file);
 		}
 	}

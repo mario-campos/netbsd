@@ -1881,21 +1881,6 @@ Finish(int errs)
 	Fatal("%d error%s", errs, errs == 1 ? "" : "s");
 }
 
-bool
-unlink_file(const char *file)
-{
-	struct stat st;
-
-	if (lstat(file, &st) == -1)
-		return false;
-
-	if (S_ISDIR(st.st_mode)) {
-		errno = EISDIR;
-		return false;
-	}
-	return unlink(file) == 0;
-}
-
 static void
 write_all(int fd, const void *data, size_t n)
 {

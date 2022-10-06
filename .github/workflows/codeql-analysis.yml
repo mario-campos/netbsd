@@ -23,6 +23,7 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: cpp
+        config-file: ./.github/codeql/codeql-config.yml
 
     - name: Build NetBSD kernel
       run: ./build.sh -U -u -O $RUNNER_TEMP/obj -j$(nproc) -m amd64 -a x86_64 kernel=GENERIC

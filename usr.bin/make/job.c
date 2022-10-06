@@ -512,7 +512,7 @@ JobDeleteTarget(GNode *gn)
 		return;
 
 	file = GNode_Path(gn);
-	if (unlink_file(file))
+	if (unlink(file))
 		Error("*** %s removed", file);
 }
 

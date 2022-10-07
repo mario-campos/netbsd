@@ -262,7 +262,7 @@ s32 ixgbe_reset_hw_vf(struct ixgbe_hw *hw)
 s32 ixgbe_stop_adapter_vf(struct ixgbe_hw *hw)
 {
 	u32 reg_val;
-	u16 i;
+	u32 i;
 
 	/*
 	 * Set the adapter_stopped flag so other driver functions stop touching

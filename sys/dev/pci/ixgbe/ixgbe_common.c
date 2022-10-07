@@ -1115,7 +1115,7 @@ void ixgbe_set_lan_id_multi_port_pcie(struct ixgbe_hw *hw)
 s32 ixgbe_stop_adapter_generic(struct ixgbe_hw *hw)
 {
 	u32 reg_val;
-	u16 i;
+	u32 i;
 
 	DEBUGFUNC("ixgbe_stop_adapter_generic");
 

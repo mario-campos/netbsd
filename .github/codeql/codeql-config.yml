@@ -1,6 +1,2 @@
-packs:
-  - codeql/cpp-queries
-
 query-filters:
-  - exclude:
-      id: cpp/suspicious-add-sizeof
+  - exclude: { id: cpp/suspicious-add-sizeof }
